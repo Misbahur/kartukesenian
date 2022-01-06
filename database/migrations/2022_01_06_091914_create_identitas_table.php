@@ -23,27 +23,12 @@ class CreateIdentitasTable extends Migration
             $table->string('desa');
             $table->string('kecamatan'); //ini integerasi table kecamatan
             $table->integer('kodepos');
-            $table->string('lintang');
-            $table->string('bujur');
             $table->string('pembinaan_seni'); //ini integrasi table jenis pembinaan
             $tables->string('sk_pendirian');
             $table->date('tanggal_pendirian');
             $table->string('status_kepemilikan'); //ini integerasi table status kepemilikan
-            $table->string('no_akta');
-            $table->date('penetapan_notaris');
-            $table->string('pejabat_pengesah');
-            $table->date('penetapan_kemenkumham');
-            $table->string('no_pendaftaran_kemenkumham');
-            $table->integer('norek');
-            $table->string('bank');
-            $table->string('kcp_bank');
-            $table->string('an_bank');
             $table->string('tanah_milik');
             $table->string('tanah_bukan_milik');
-            $table->string('nama_wajib_pajak');
-            $table->string('npwp');
-            $table->string('no_telp');
-            $table->string('no_fax');
             $table->timestamps();
         });
     }
