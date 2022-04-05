@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Anggota extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
+    public function identitas()
+    {
+        return $this->belongsTo('App\Models\Identitas', 'identitas_id', 'id');
+    }
 }

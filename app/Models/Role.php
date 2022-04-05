@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Role extends Model
 {
     use HasFactory;
+    protected $guarded = [];
+
+    public function users()
+    {
+        return $this->hasOne('App\Models\Role', 'roles_id');
+    }
 }

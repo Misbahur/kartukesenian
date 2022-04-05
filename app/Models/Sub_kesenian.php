@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Jns_kepemilikan extends Model
+class Sub_kesenian extends Model
 {
     use HasFactory;
     protected $guarded = [];
 
-    public function identitas()
+    public function kesenian()
     {
-        return $this->hasOne('App\Models\Identitas', 'identitas_id');
+        return $this->belongsTo('App\Models\Jns_kesenian', 'jns_kesenian_id', 'id');
     }
 }

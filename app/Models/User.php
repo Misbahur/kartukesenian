@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'roles_id'
     ];
 
     /**
@@ -41,4 +42,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function roles()
+    {
+        return $this->belongsTo('App\Models\Roles', 'roles_id', 'id');
+    }
+
+    public function identitas()
+    {
+        return $this->hasOne('App\Models\Identitas', 'identitas_id');
+    }
 }

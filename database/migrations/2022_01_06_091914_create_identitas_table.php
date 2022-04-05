@@ -19,15 +19,16 @@ class CreateIdentitasTable extends Migration
             $table->string('nama');
             $table->string('no_induk')->nullable();
             $table->integer('rt');
-            $table->integer('rt');
+            $table->integer('rw');
             $table->string('dusun');
             $table->string('desa');
             $table->foreignId('kecamatans_id')->nullable()->index('kecamatans_id_fk12_idx'); //ini integerasi table kecamatan
             $table->integer('kodepos');
             $table->foreignId('jns_pembinaans_id')->nullable()->index('jns_pembinaans_id_fk13_idx'); //ini integrasi table jenis pembinaan
-            $tables->string('sk_pendirian');
+            $table->string('sk_pendirian');
             $table->date('tanggal_pendirian');
             $table->foreignId('jns_kepemilikans_id')->nullable()->index('jns_kepemilikans_id_fk14_idx'); //ini integerasi table status kepemilikan
+            $table->foreignId('jns_kesenians_id')->nullable()->index('jns_kesenians_id_fk15_idx'); //ini integerasi table jenis kesenina
             $table->string('tanah_milik');
             $table->string('tanah_bukan_milik');
             $table->enum('status', ['aktif', 'tidak']);
