@@ -15,6 +15,7 @@ class CreateLokasisTable extends Migration
     {
         Schema::create('lokasis', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('identitas_id')->nullable()->index('identitas_id_fk7_idx');
             $table->string('lintang');
             $table->string('bujur');
             $table->timestamps();

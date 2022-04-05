@@ -15,6 +15,7 @@ class CreateSinitasisTable extends Migration
     {
         Schema::create('sinitasis', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('identitas_id')->nullable()->index('identitas_id_fk5_idx');
             $table->string('nama');
             $table->string('keterangan');
             $table->timestamps();

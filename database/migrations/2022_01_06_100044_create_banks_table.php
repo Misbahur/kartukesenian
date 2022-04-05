@@ -15,6 +15,7 @@ class CreateBanksTable extends Migration
     {
         Schema::create('banks', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('identitas_id')->nullable()->index('identitas_id_fk9_idx');
             $table->integer('norek');
             $table->string('bank');
             $table->string('kcp_bank');

@@ -15,6 +15,7 @@ class CreatePengalamanKaryasTable extends Migration
     {
         Schema::create('pengalaman_karyas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('identitas_id')->nullable()->index('identitas_id_fk2_idx');
             $table->string('judul');
             $table->integer('tahundiciptakan');
             $table->string('penata_tari');

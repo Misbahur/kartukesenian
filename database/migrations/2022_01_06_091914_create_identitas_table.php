@@ -15,20 +15,22 @@ class CreateIdentitasTable extends Migration
     {
         Schema::create('identitas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('users_id')->nullable()->index('users_id_fk11_idx');
             $table->string('nama');
-            $table->string('no_induk');
+            $table->string('no_induk')->nullable();
             $table->integer('rt');
             $table->integer('rt');
             $table->string('dusun');
             $table->string('desa');
-            $table->string('kecamatan'); //ini integerasi table kecamatan
+            $table->foreignId('kecamatans_id')->nullable()->index('kecamatans_id_fk12_idx'); //ini integerasi table kecamatan
             $table->integer('kodepos');
-            $table->string('pembinaan_seni'); //ini integrasi table jenis pembinaan
+            $table->foreignId('jns_pembinaans_id')->nullable()->index('jns_pembinaans_id_fk13_idx'); //ini integrasi table jenis pembinaan
             $tables->string('sk_pendirian');
             $table->date('tanggal_pendirian');
-            $table->string('status_kepemilikan'); //ini integerasi table status kepemilikan
+            $table->foreignId('jns_kepemilikans_id')->nullable()->index('jns_kepemilikans_id_fk14_idx'); //ini integerasi table status kepemilikan
             $table->string('tanah_milik');
             $table->string('tanah_bukan_milik');
+            $table->enum('status', ['aktif', 'tidak']);
             $table->timestamps();
         });
     }

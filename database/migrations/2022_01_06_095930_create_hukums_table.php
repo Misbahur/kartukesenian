@@ -15,6 +15,7 @@ class CreateHukumsTable extends Migration
     {
         Schema::create('hukums', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('identitas_id')->nullable()->index('identitas_id_fk8_idx');
             $table->string('no_akta');
             $table->date('penetapan_notaris');
             $table->string('pejabat_pengesah');

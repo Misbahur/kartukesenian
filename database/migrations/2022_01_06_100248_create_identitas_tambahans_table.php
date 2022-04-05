@@ -15,6 +15,7 @@ class CreateIdentitasTambahansTable extends Migration
     {
         Schema::create('identitas_tambahans', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('identitas_id')->nullable()->index('identitas_id_fk10_idx');
             $table->string('nama_wajib_pajak');
             $table->string('npwp');
             $table->string('no_telp');
