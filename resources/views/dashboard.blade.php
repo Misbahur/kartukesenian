@@ -1,17 +1,20 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.app')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
-                </div>
-            </div>
-        </div>
+{{-- Set Tittle --}}
+@section('title', 'Dashboard')
+
+@section('content')
+
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+    <h1 class="text-2xl font-semibold text-gray-900">Dashboard</h1>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+    <!-- Replace with your content -->
+    <div class="py-4">
+        <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
     </div>
-</x-app-layout>
+    <!-- /End replace -->
+</div>
+
+@endsection
