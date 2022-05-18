@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
             [
             'name' => 'Misbahur Rifqi',
             'email' => 'rifqi.tampan61@gmail.com',
-            'activ' => '1',
+            'active' => '1',
             'password' => Hash::make('rifqi123')
             ],
             [
